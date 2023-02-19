@@ -1,10 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import { BookList } from './BookList';
+import { MyBadge } from './MyBadge';
+import scifiBooks from './scifi.json';
+import { SingleBook } from './SingleBook';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +20,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <MyBadge text="Testo Badge" color="primary"></MyBadge>
+      <SingleBook book={scifiBooks[0]}></SingleBook>
+      <BookList books={scifiBooks}></BookList>
     </div>
   );
 }
